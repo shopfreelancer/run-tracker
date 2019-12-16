@@ -44,6 +44,13 @@ public class CacheConfiguration {
             createCache(cm, com.shopfreelancer.domain.User.class.getName() + ".authorities");
             createCache(cm, com.shopfreelancer.domain.PersistentToken.class.getName());
             createCache(cm, com.shopfreelancer.domain.User.class.getName() + ".persistentTokens");
+            createCache(cm, com.shopfreelancer.domain.RfbLocation.class.getName());
+            createCache(cm, com.shopfreelancer.domain.RfbLocation.class.getName() + ".rvbEvents");
+            createCache(cm, com.shopfreelancer.domain.RfbEvent.class.getName());
+            createCache(cm, com.shopfreelancer.domain.RfbEvent.class.getName() + ".rfbEventAttendances");
+            createCache(cm, com.shopfreelancer.domain.RfbEventAttendance.class.getName());
+            createCache(cm, com.shopfreelancer.domain.RfbUser.class.getName());
+            createCache(cm, com.shopfreelancer.domain.RfbUser.class.getName() + ".rfbEventAttendances");
             // jhipster-needle-ehcache-add-entry
         };
     }

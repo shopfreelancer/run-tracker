@@ -1,0 +1,38 @@
+{
+    "name": "RfbEvent",
+    "fields": [
+        {
+            "fieldName": "eventDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "eventCode",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "rfbEventAttendance",
+            "otherEntityRelationshipName": "rfbEvent",
+            "relationshipName": "rfbEventAttendance"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "rfbLocation",
+            "otherEntityRelationshipName": "rvbEvent",
+            "relationshipName": "rfbLocation",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191216093534",
+    "entityTableName": "rfb_event",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
